@@ -20,36 +20,40 @@
     {:then users}
     
 
-
     <div class="table">
+    <table class="border-collapse border border-slate-400">
         <thread>
             <tr>
-                <th>id</th>
-                <th>Nome</th>
-                <th>email</th>
+                <th class="border border-slate-300">id</th>
+                <th class="border border-slate-300">Nome</th>
+                <th class="border border-slate-300">email</th>
             </tr>
         </thread>
 
         <tbody>
         {#each users as u }
     
-        <tr>
-            <td>{u.id}</td>
-            <td>{u.name}</td>
-            <td>{u.email}</td>
+        <tr> 
+            <td class="border border-slate-300">{u.id}</td>
+            <td class="border border-slate-300">{u.name}</td>
+            <td class="border border-slate-300">{u.email}</td>
             
         </tr>
-
         {/each}
-        </tbody>
+
         
-    </div>
+        </tbody>
+    
+    
+    </table>
+</div>
     
     {:catch error}
 
         <p style="color: red">{error.message}</p>
     {/await}
     <style>
+
     .table{
         display: grid;
         
@@ -58,4 +62,5 @@
         border: 1px solid #ccc;
         padding: 6px;
     }
+    
     </style>

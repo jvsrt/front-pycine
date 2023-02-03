@@ -4,8 +4,10 @@
   import Artista from './lib/Artista.svelte'
 
   import User from './lib/User.svelte'
-
+  import EditUser from './lib/EditUser.svelte'
   import UserForm from './lib/UserForm.svelte'
+  import DeleteUser from './lib/DeleteUser.svelte'
+
 </script>
 
 <main>
@@ -15,8 +17,19 @@
     
 
     <UserForm />
-
+  <br>
+  <br>
+  <br>
     <User />
+  <br>
+  <br>
+  <br>
+    <EditUser />
+  <br>
+  <br>
+  <br>
+    <DeleteUser/>
+  
   </div>
 
 
@@ -38,5 +51,8 @@ main button{
 }
 button{
     color: rgb(78, 65, 74);
+}
+.card{
+  padding-bottom: 400px;
 }
 </style>
